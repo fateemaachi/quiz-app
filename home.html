@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
+</head>
+<body  class="w-full min-h-screen flex justify-center items-center">
+<!-- Home Page -->
+<div class="start-screen absolute top-0 w-full h-full flex flex-col justify-center items-center ">
+    <button id="start-button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Start</button>
+  </div>
+  
+  <div id="display-container" class="bg-white px-7 py-12 w-[100%] max-w-xl mx-auto my-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg">
+    <!-- New Container for School Name, Student Name, and Timer -->
+    <div class="flex justify-between items-center mb-6">
+      <span id="school-name" class="text-lg font-semibold">School: [School Name]</span>
+      <span id="student-name" class="text-lg font-semibold">Student: [Student Name]</span>
+      <span id="countdown-timer" class="text-lg font-semibold">Timer: 02:00</span>
+  </div>
+
+    <div class="header mb-7 flex justify-between items-center pb-2.5 border-b-2">
+      <div class="number-of-count">
+        <span class="number-of-question">1 of 10 questions</span>
+      </div>
+      <div class="timer-div bg-[e1f5fe] w-[120px] rounded-3xl flex justify-between items-center py-2 px-7 ">
+        <img src="https://www.svgrepo.com/show/388777/timer.svg" alt="timer" class="w-[40px] h-[40px] mr-2" />
+        <span class="time-left"></span>
+      </div>
+    </div>
+    <div id="container">
+      <!-- questions and options will be displayed here -->
+    </div>
+    <button id="next-button" class="mt-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  </div>
+  <!-- <div class="score-container absolute top-0 w-full h-full flex flex-col justify-center items-center hidden">
+    <div id="user-score">Demo Score</div>
+    <button id="restart" class=" mt-3.5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Restart</button>
+  </div> -->
+
+  
+
+
+<!-- Main modal -->
+<div id="result-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+  <div class="relative p-4 w-full max-w-2xl max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-gray-800 text-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+              <h3 class="text-xl font-semibold">
+                  Quiz Result
+              </h3>
+              <!-- <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-600 hover:text-white rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="result-modal">
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+              </button> -->
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5 space-y-4">
+              <p id="modal-message" class="text-base leading-relaxed">
+                  <!-- Result message will be dynamically inserted here -->
+              </p>
+              <p id="modal-date" class="text-base leading-relaxed">
+                  <!-- Date and time will be dynamically inserted here -->
+              </p>
+          </div>
+          <!-- Modal footer -->
+          <div class="flex items-center p-4 md:p-5 border-t border-gray-600 rounded-b">
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="window.location.href='index.html'">Go to Home Page</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--table-->
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
